@@ -1,0 +1,58 @@
+vi:
+  hello: "Xin Chào"
+  base_title: "Hướng dẫn Ruby and Rails Sample App"
+  rails: "Hướng dẫn Rails"
+  book : "sach"
+  log_in: "Đăng Nhập"
+  sign_up: "Đăng ki"
+  app_name: "Sample App"
+  create_my_account: "Taọ tài khoản"
+  users: "Người dùng"
+  profile: "Trang cá nhân"
+  setting: "Cài đặt"
+  remember: "Lưu thông tin đăng nhập"
+  home:
+    index: "Trang chủ"
+    header: "Xin chào Sample App"
+    signup: "Đăng ký ngay"
+    title: "Đây là trang chủ cho Sample App"
+    application: "sample application."
+  help:
+    index: "Trợ giúp"
+    title: "Nhận trợ giúp rails ở"
+    book: "Dể nhận trợ giúp ở sample app"
+    page: "Rails trợ giúp"
+  errors:
+    email: "Email hay password không hợp lệ"
+    birthday: "không hợp lệ"
+    user: "User không hợp lệ"
+    one: "Form chỉ có một lỗi"
+    other: "Form có %{count} lỗi"
+  users:
+    index: "Người dùng"
+    all: "Tất cả người dùng"
+    edit: "Thay đổi"
+    update: "Cập nhật"
+    create: "Tạo mới"
+    delete: "Xóa người dùng"
+    sign_up: "Đăng kí"
+    confirm: "Bạn có chắc chắn?"
+    email: "Kích hoạt email của bạn"
+    email_confirm: "Chào mừng bạn đến với Simple App,  vui lòng click bên dưới để kích hoạt tài khoản"
+    active: "Kích hoạt"
+    active_warning:  "Vui lòng kiểm tra email để kích hoạt tài khoản"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Ten Không được để trống"
+            email:
+              invalid: "Không hợp lệ"
+              taken: "đã tồn tại"
+            password:
+              too_short: "Quá ngắn"
+              blank: "Không hợp lệ"
+            password_confirmation:
+              confirmation: "Khong match"

@@ -1,0 +1,7 @@
+DB_USERNAME : root
+DB_HOST: 127.0.0.1
+DB_PORT: 3300
+DB_NAME: sample_app
+USER_EMAIL: "chihieu8320@gmail.com"
+USER_PASSWORD: "@Hieu@0909400743"
+USER_HOST: "localhost:3000"
