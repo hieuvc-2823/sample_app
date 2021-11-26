@@ -31,3 +31,23 @@
 
 en:
   hello: "Hello world"
+  base_title: "Ruby on Rails Tutorial Sample App"
+  rails: "Ruby on Rails Tutorial"
+  book : "book"
+  log_in: "Log In"
+  app_name: "Sample App"
+  home:
+    index: "Home"
+    header: "Welcome to the Sample App"
+    signup: "Sign up now!"
+    title: "This is the home page for the"
+    application: "sample application."
+  help:
+    index: "Help"
+    title: "Get help on the Ruby on Rails Tutorial at the"
+    book: "To get help on this sample app, see the"
+    page: "Rails Tutorial help page"
+  rails_url:
+    home: "http://www.railstutorial.org"
+    help: "http://www.railstutorial.org/help"
+    book: "http://www.railstutorial.org/book"
