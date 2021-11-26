@@ -7,6 +7,10 @@ en:
   app_name: "Sample App"
   sign_up: "Sign Up"
   create_my_account: "Create My Account"
+  users: "Users"
+  profile: "Profile"
+  setting: "Setting"
+  remember: "Remember me"
   home:
     index: "Home"
     header: "Welcome to the Sample App"

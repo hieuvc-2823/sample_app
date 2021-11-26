@@ -7,6 +7,10 @@ vi:
   sign_up: "Đăng ki"
   app_name: "Sample App"
   create_my_account: "Taọ tài khoản"
+  users: "Người dùng"
+  profile: "Trang cá nhân"
+  setting: "Cài đặt"
+  remember: "Lưu thông tin đăng nhập"
   home:
     index: "Trang chủ"
     header: "Xin chào Sample App"
