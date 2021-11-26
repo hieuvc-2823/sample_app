@@ -1,12 +1,15 @@
 en:
   hello: "Hello world"
   base_title: "Ruby on Rails Tutorial Sample App"
+  welcome: "Welcome to the Vo Chi Hieu Sample App!"
   rails: "Ruby on Rails Tutorial"
   book : "book"
   log_in: "Log In"
+  log_out: "Log Out"
   app_name: "Sample App"
   sign_up: "Sign Up"
   create_my_account: "Create My Account"
+  account: "Account"
   users: "Users"
   profile: "Profile"
   setting: "Setting"
@@ -28,6 +31,20 @@ en:
     user: "User invalid"
     one: "Form contain 1 error"
     other: "Form contain %{count} errors"
+  users:
+    index: "User"
+    all: "Users"
+    invalid: "Invalid account"
+    edit: "Edit"
+    update: "Update"
+    create: "Create"
+    delete: "Delete"
+    sign_up: "Sign Up"
+    confirm: "Are you sure?"
+    email: "active your email address"
+    email_confirm: "Welcome to the Sample App, please click the following link to active your account"
+    active: "Active"
+    active_warning:  "Please check your email acount to active your account"
   activerecord:
     errors:
       models:
