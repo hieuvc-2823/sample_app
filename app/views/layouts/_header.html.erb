@@ -1,0 +1,18 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to t("app_name"), static_pages_home_path , id: "logo" %>
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <%= link_to t("home.inddex"), static_pages_home_path %>
+          </li>
+          <li>
+            <%= link_to t("help.index"), static_pages_help_path %>
+          </li>
+          <li>
+            <%= link_to t("log_in"), "#" %>
+          </li>
+        </ul>
+      </nav>
+  </div>
+</header>
