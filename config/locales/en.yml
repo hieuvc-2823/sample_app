@@ -5,6 +5,8 @@ en:
   book : "book"
   log_in: "Log In"
   app_name: "Sample App"
+  sign_up: "Sign Up"
+  create_my_account: "Create My Account"
   home:
     index: "Home"
     header: "Welcome to the Sample App"
@@ -17,5 +19,23 @@ en:
     book: "To get help on this sample app, see the"
     page: "Rails Tutorial help page"
   errors:
-    email: "Invalid Email Address"
-    birthday: "Invalid Birth Day"
+    email: "Email/ Password invalid"
+    birthday: "invalid"
+    user: "User invalid"
+    one: "Form contain 1 error"
+    other: "Form contain %{count} errors"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "is not blank"
+              email:
+              invalid: "Invalid"
+              taken: "has already been taken"
+            password:
+              too_short: "at least 6 characters"
+              blank: "invalid"
+            password_confirmation:
+              confirmation: "not match"

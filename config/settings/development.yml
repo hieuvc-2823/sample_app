@@ -7,5 +7,6 @@ rails:
   help: "http://www.railstutorial.org/help"
   book: "http://www.railstutorial.org/book"
   home: "http://www.railstutorial.org"
-
+gravatar:
+  url: "https://secure.gravatar.com/avatar"
 regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
