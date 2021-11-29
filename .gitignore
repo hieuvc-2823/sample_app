@@ -32,7 +32,10 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /config/credentials.yaml.enc
+<<<<<<< HEAD
 
+=======
+>>>>>>> 36c1da397c04b220a578e90a95cabfceb05fea8b
 /public/packs
 /public/packs-test
 /node_modules
@@ -44,3 +47,9 @@ yarn-debug.log*
 /test
 /tmp
 config/database.yml
+<<<<<<< HEAD
+=======
+
+# Ignore application configuration
+/config/application.yml
+>>>>>>> 36c1da397c04b220a578e90a95cabfceb05fea8b
