@@ -1,40 +1,16 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
 en:
   hello: "Hello world"
   base_title: "Ruby on Rails Tutorial Sample App"
+  welcome: "Welcome to the Vo Chi Hieu Sample App!"
   rails: "Ruby on Rails Tutorial"
   book : "book"
   log_in: "Log In"
+  log_out: "Log Out"
   app_name: "Sample App"
+  change: "change"
+  account: "Account"
+  profile: "Profile"
+  setting: "Settings"
   home:
     index: "Home"
     header: "Welcome to the Sample App"
@@ -50,3 +26,21 @@ en:
     home: "http://www.railstutorial.org"
     help: "http://www.railstutorial.org/help"
     book: "http://www.railstutorial.org/book"
+  gravatar:
+    emails: "https://gravatar.com/emails"
+    avatar: "https://secure.gravatar.com/avatar/"
+  errors:
+    login: "Please log in."
+    pwd: "Invalid email/password combination"
+  success:
+  warning:
+    delete: "You sure?"
+  users:
+    index: "Users"
+    all: "All users"
+    edit: "Edit Users"
+    update: "Update your profile"
+    create: "Create your account"
+    delete: "Dlete"
+    sign_up: "Sign Up"
+    confirm: "Are you sure?"

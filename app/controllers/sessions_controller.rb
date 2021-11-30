@@ -8,9 +8,9 @@ class SessionsController < ApplicationController
       log_in user
       # create cookie in order to remember user
       params[:session][:remember_me] == "1" ? remember(user) : forget(user)
-      redirect_to user
+      redirect_back_or user
     else
-      redirect_to users_login_path, danger: "Invalid email/password combination"
+      redirect_to users_login_path, danger: I18n.t("errors.pwd")
     end
   end
 

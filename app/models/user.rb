@@ -5,7 +5,7 @@ class User < ApplicationRecord
   validates :email, uniqueness: true, length: {maximum: 50},
   format: {with: VALID_EMAIL_REGEX}
   validates :password, length: {in: 6..20}
-  validates :name, exclusion: {in: %w(o), message: "%{value} not a valid name"},
+  validates :name, exclusion: {in: %w(obama trump), message: "%{value} not a valid name"},
   length: {maximum: 50}
   has_secure_password
   validate :valid_age, if: proc{|u| u.birthday.present?}

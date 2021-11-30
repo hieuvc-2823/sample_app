@@ -10,23 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2021_11_26_073951) do
-=======
-ActiveRecord::Schema.define(version: 2021_11_29_070229) do
->>>>>>> Chapter 9 : Avanced Login
+ActiveRecord::Schema.define(version: 2021_11_30_061418) do
 
-  create_table "users", charset: "utf8mb4", force: :cascade do |t|
+  create_table "users", charset: "utf8", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
     t.string "birthday"
-<<<<<<< HEAD
-=======
     t.string "remember_digest"
->>>>>>> Chapter 9 : Avanced Login
+    t.boolean "admin", default: false
   end
 
 end
