@@ -1,0 +1,11 @@
+length:
+  len_50: 50
+  len_6: 6
+  len_20: 20
+age: 100
+rails:
+  help: "http://www.railstutorial.org/help"
+  book: "http://www.railstutorial.org/book"
+  home: "http://www.railstutorial.org"
+
+regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
