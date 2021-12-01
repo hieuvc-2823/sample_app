@@ -4,11 +4,15 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user&.authenticate params[:session][:password]
-      # create new session
-      log_in user
-      # create cookie in order to remember user
-      params[:session][:remember_me] == "1" ? remember(user) : forget(user)
-      redirect_back_or user
+      if user.activated?
+        log_in user
+        params[:session][:remember_me] == "1" ? remember(user) : forget(user)
+        redirect_back_or user
+      else
+        message = I18n.t("users.active_warning")
+        flash[:warning] = message
+        redirect_to static_pages_home_path
+      end
     else
       redirect_to users_login_path, danger: I18n.t("errors.pwd")
     end

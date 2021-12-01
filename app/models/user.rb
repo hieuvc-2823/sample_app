@@ -1,6 +1,7 @@
 class User < ApplicationRecord
-  attr_accessor :remember_token
+  attr_accessor :remember_token, :activation_token
   before_save{self.email = email.downcase}
+  before_create :create_activation_digest
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
   validates :email, uniqueness: true, length: {maximum: 50},
   format: {with: VALID_EMAIL_REGEX}
@@ -8,7 +9,7 @@ class User < ApplicationRecord
   validates :name, exclusion: {in: %w(obama trump), message: "%{value} not a valid name"},
   length: {maximum: 50}
   has_secure_password
-  validate :valid_age, if: proc{|u| u.birthday.present?}
+  validate :valid_age, if: ->{birthday.present?}
 
   def valid_age
     return if Date.parse(birthday) > 100.years.ago.to_date
@@ -37,14 +38,18 @@ class User < ApplicationRecord
     update_attribute(:remember_digest, User.digest(remember_token))
   end
 
-  # compare between remember_token and bcrypt rembember_digest
-  def authenticated? remember_token
-    return false if remember_digest.nil?
-
-    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  def authenticated?(attribute, remember_token)
+    digest = send("#{attribute}_digest")
+    return false if digest.nil?
+    BCrypt::Password.new(digest).is_password?(remember_token)
   end
 
   def forget
     update_attribute(:remember_digest, nil)
+  end
+
+  def create_activation_digest
+    self.activation_token = User.new_token
+    self.activation_digest = User.digest(activation_token)
   end
 end

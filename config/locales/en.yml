@@ -32,7 +32,9 @@ en:
   errors:
     login: "Please log in."
     pwd: "Invalid email/password combination"
+    active: "Invalid activation link"
   success:
+    acctive: "Account activated!"
   warning:
     delete: "You sure?"
   users:
@@ -44,3 +46,7 @@ en:
     delete: "Dlete"
     sign_up: "Sign Up"
     confirm: "Are you sure?"
+    email: "Activation your email address"
+    email_confirm: "Welcome to the Sample App! Click on the link below to activate your account:"
+    active: "Active"
+    active_warning:  "Please check your email to activate your account."

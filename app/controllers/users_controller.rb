@@ -6,8 +6,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] =  I18n.t "welcome"
-      redirect_to @user
+      UserMailer.account_activation(@user).deliver_now
+      flash[:info] = I18n.t('users.active_warning')
+      redirect_to static_pages_home_path
     else
       log_in @user
       render :show
