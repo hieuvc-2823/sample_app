@@ -4,7 +4,9 @@ vi:
   rails: "Hướng dẫn Rails"
   book : "sach"
   log_in: "Đăng Nhập"
+  sign_up: "Đăng ki"
   app_name: "Sample App"
+  create_my_account: "Taọ tài khoản"
   home:
     index: "Trang chủ"
     header: "Xin chào Sample App"
@@ -18,4 +20,22 @@ vi:
     page: "Rails trợ giúp"
   errors:
     email: "Email hay password không hợp lệ"
-    birthday: "Ngày sinh không hợp lệ"
+    birthday: "không hợp lệ"
+    user: "User không hợp lệ"
+    one: "Form chỉ có một lỗi"
+    other: "Form có %{count} lỗi"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Ten Không được để trống"
+            email:
+              invalid: "Không hợp lệ"
+              taken: "đã tồn tại"
+            password:
+              too_short: "Quá ngắn"
+              blank: "Không hợp lệ"
+            password_confirmation:
+              confirmation: "Khong match"
