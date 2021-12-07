@@ -3,6 +3,9 @@ length:
   len_6: 6
   len_20: 20
 age: 100
+users:
+  per_page: 5
+  avatar_size: 80
 rails:
   help: "http://www.railstutorial.org/help"
   book: "http://www.railstutorial.org/book"

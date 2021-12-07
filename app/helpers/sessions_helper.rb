@@ -9,7 +9,7 @@ module SessionsHelper
       @current_user ||= User.find_by id: user_id
     elsif (user_id = cookies.signed[:user_id])
       user = User.find_by id: user_id
-      if user&.authenticated?(cookies[:remember_token])
+      if user&.authenticated?(:remember, cookies[:remember_token])
         log_in user
         @current_user = user
       end
@@ -42,5 +42,30 @@ module SessionsHelper
     user.forget
     cookies.delete(:user_id)
     cookies.delete(:remember_token)
+  end
+
+  def current_user? user
+    user && user == current_user
+  end
+
+  def redirect_back_or default
+    redirect_to(session[:forwarding_url] || default)
+    session.delete(:forwarding_url)
+  end
+
+  def store_location
+    session[:forwarding_url] = request.original_url if request.get?
+  end
+
+  def user_active? user
+    log_in user
+    if user.activated?
+      params[:session][:remember_me] == "1" ? remember(user) : forget(user)
+      redirect_back_or user
+    else
+      message = t "users.active_warning"
+      flash[:warning] = message
+      redirect_to static_pages_home_path
+    end
   end
 end

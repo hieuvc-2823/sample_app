@@ -33,15 +33,20 @@ class User < ApplicationRecord
     update_column(:remember_digest, User.digest(remember_token))
   end
 
-  # compare between remember_token and bcrypt rembember_digest
-  def authenticated? remember_token
-    return false unless remember_digest
+  def authenticated? attribute, remember_token
+    digest = send("#{attribute}_digest")
+    return false if digest.nil?
 
-    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+    BCrypt::Password.new(digest).is_password?(remember_token)
   end
 
   def forget
     update_column(:remember_digest, nil)
+  end
+
+  def create_activation_digest
+    self.activation_token = User.new_token
+    self.activation_digest = User.digest(activation_token)
   end
 
   private

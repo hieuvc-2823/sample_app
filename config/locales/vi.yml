@@ -7,7 +7,7 @@ vi:
   sign_up: "Đăng ki"
   app_name: "Sample App"
   create_my_account: "Taọ tài khoản"
-  users: "Người dùng"
+  account: "Tài khoản"
   profile: "Trang cá nhân"
   setting: "Cài đặt"
   remember: "Lưu thông tin đăng nhập"
@@ -16,7 +16,7 @@ vi:
     header: "Xin chào Sample App"
     signup: "Đăng ký ngay"
     title: "Đây là trang chủ cho Sample App"
-    application: "sample application."
+    application: "sample ứng dụng"
   help:
     index: "Trợ giúp"
     title: "Nhận trợ giúp rails ở"
@@ -28,6 +28,20 @@ vi:
     user: "User không hợp lệ"
     one: "Form chỉ có một lỗi"
     other: "Form có %{count} lỗi"
+  users:
+    index: "Người dùng"
+    all: "Tất cả người dùng"
+    invalid: "Người dùng không hợp lệ"
+    edit: "Thay đổi"
+    update: "Cập nhật"
+    create: "Tạo mới"
+    delete: "Xóa người dùng"
+    sign_up: "Đăng kí"
+    confirm: "Bạn có chắc chắn?"
+    email: "Kích hoạt email của bạn"
+    email_confirm: "Chào mừng bạn đến với Simple App,  vui lòng click bên dưới để kích hoạt tài khoản"
+    active: "Kích hoạt"
+    active_warning:  "Vui lòng kiểm tra email để kích hoạt tài khoản"
   activerecord:
     errors:
       models:

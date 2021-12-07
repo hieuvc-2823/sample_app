@@ -1,0 +1,9 @@
+DB_USERNAME: "your database name"
+DB_HOST: "your database host"
+DB_PORT: "your database port"
+DB_NAME: "your database name"
+USER_EMAIL: "your email address"
+USER_PASSWORD: "your email password"
+USER_HOST: "your server"
+
+#hint: create config/application.yml and you can change all of your environment variables

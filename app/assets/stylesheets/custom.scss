@@ -1,6 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+@import "color";
 body {
   padding-top: 60px;
 }
@@ -20,21 +20,21 @@ textarea {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
+  color: $logo_color;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
 }
 #logo:hover {
-  color: #fff;
+  color: $logo_color;
   text-decoration: none;
 }
 input,
 textarea,
 select,
 .uneditable-input {
-  border: 1px solid #bbb;
+  border: 1px solid $border_input;
   width: 100%;
   margin-bottom: 15px;
   input {
@@ -87,4 +87,98 @@ h1 {
 #session_remember_me {
   margin-left: 0;
   width: auto;
+}
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+.microposts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid $border_li;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+span.image {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+.gravatar_edit {
+  margin-top: 15px;
+}
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $text-color;;
+    color: $text-color;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $text-color;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+.users.follow {
+  padding: 0;
 }
